@@ -6,8 +6,10 @@ app = FastAPI()
 items=[]
 @app.get("/items/{item_id}")
 async def get_item(item_id: int, q: str = None):
-   if item_id < lenitem_id]
-    return items
+   if item_id < len(items):
+       return items[item_id]
+   else:
+       raise HTTPException(status_code=404, detail="Item not found")
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
