@@ -9,7 +9,8 @@ async def root():
     return {"message": "Hello World"}
 
 @app.post("/items")
-async def post():
+async def create_items(item: str):
+    items
     return {"message": "Hello World from POST"}
 
 @app.put("/")
