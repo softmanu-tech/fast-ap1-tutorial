@@ -10,8 +10,8 @@ async def root():
 
 @app.post("/items")
 async def create_items(item: str):
-    items
-    return {"message": "Hello World from POST"}
+    items.append(item)
+    return items
 
 @app.put("/")
 async def put():
