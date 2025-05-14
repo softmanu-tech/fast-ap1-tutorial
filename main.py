@@ -6,7 +6,7 @@ app = FastAPI()
 items=[]
 @app.get("/items/{item_id}")
 async def get_item(item_id: int, q: str = None):
-    item = items[item_id]
+   if item_id < lenitem_id]
     return items
 @app.get("/")
 async def root():
